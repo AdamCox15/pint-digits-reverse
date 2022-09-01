@@ -67,3 +67,11 @@ function reversedNum(num) {
       }
       
       console.log(printDigits(3690))
+
+      const printDigits = (num) => {
+        while(num){
+          let digitToPrint =  num % 10 
+          console.log(digitToPrint) 
+          num = (num - digitToPrint) / 10 
+        }
+      }
