@@ -36,3 +36,34 @@ function reversedNum(num) {
   }
 
   console.log(reversedNum(00998877));
+
+  const reverse = (num) => {
+   let reversed_number = 0;
+    while (num != 0) {
+    reversed_number *= 10;
+    reversed_number += num % 10;
+    num -= num % 10;
+    num /= 10;
+    }
+    return reversed_number;
+    }
+
+    console.log(reverse(123456789000))
+
+    const printDigits =(num)=>{
+        let mod = 0
+        let answer = 0
+        let zero =''
+        if(num % 10 === 0){
+          zero ='0'
+        }
+        while(num > 0){
+          mod = num % 10 
+         answer = answer * 10 + mod
+          num = Math.floor(num/10)
+      
+        }
+          return zero + answer
+      }
+      
+      console.log(printDigits(3690))
